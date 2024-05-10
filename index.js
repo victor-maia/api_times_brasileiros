@@ -4,9 +4,9 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = 3333;
 
-app.use(bodyParser.json());
+'app.use(bodyParser.json());'
 
 
 app.listen(port, () => {
@@ -45,7 +45,17 @@ class Time {
             } catch (error) {
                 console.error('Erro ao salvar os times:', error);
             }
-        }       
+        }  
+        
+        
+
+        async filterTimesByState(estado){
+            let times = await this.loadTimes();
+            let filteredTimes = times.filter(t => t.estado.toLowerCase() === estado.toLowerCase())
+
+          
+            return filteredTimes
+        }
 }
 
 const time = new Time(filePath);
@@ -100,3 +110,22 @@ app.delete('/times/:nome', async (req, res) => {
 
 
 
+app.get('/times/:estado', async (req, res, next) => {
+    const { estado } = req.params;
+
+    let times = await time.filterTimesByState(estado);
+
+
+    try {
+        let times = await time.filterTimesByState(estado);
+
+        if (times.length === 0) {
+            throw new Error('Estado não possui times cadastrados');
+        }
+
+        res.status(200).send(times);
+    } catch (error) {
+        next(error); 
+    }
+
+});
