@@ -4,9 +4,14 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
-const port = 3939;
+const port = 3000;
 
 app.use(bodyParser.json());
+
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
 
 const filePath = path.join(__dirname, 'times.json');
 
@@ -45,6 +50,9 @@ class Time {
 
 const time = new Time(filePath);
 
+
+// Adicionar time
+
 app.post('/times', async (req, res) => {
     const { nome, estado, sigla, escudo } = req.body;
 
@@ -68,6 +76,27 @@ app.post('/times', async (req, res) => {
     res.status(201).send(novoTime);
 });
 
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
-});
+// Remover time
+
+app.delete('/times/:nome', async (req, res) => {
+    const { nome } = req.params
+
+    let times = await time.loadTimes()
+
+    const index = times.findIndex(t => t.nome.toLowerCase() === nome.toLowerCase());
+
+  
+
+    if(index === -1){
+        return res.status(404).send("Time não encontrado")
+    }
+
+    times.splice(index, 1);
+
+    await time.saveTimes(times);
+
+    res.status(200).send("Time deletado com sucesso")
+})
+
+
+
