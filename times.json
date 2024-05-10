@@ -1,0 +1,15 @@
+[
+  {
+    "nome": "Corinthians",
+    "estado": "SP",
+    "sigla": "COR",
+    "escudo": "https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png"
+  },
+  {
+    "nome": "São Paulo",
+    "estado": "SP",
+    "sigla": "SAO",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png/120px-S%C3%A3o_Paulo_Futebol_Clube.png"
+  }
+
+]
