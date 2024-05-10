@@ -52,9 +52,16 @@ app.post('/times', async (req, res) => {
         return res.status(400).send("Por favor, forneça o nome e o estado do time.");
     }
 
+    let times = await time.loadTimes();
+    
+    if (times.some(t => t.sigla === sigla || t.nome === nome)){
+        return res.status(400).send("Time já existe");
+    }
+
+
     const novoTime = time.createTime(nome, estado, sigla, escudo)
 
-    let times = await time.loadTimes();
+    
     times.push(novoTime); 
     await time.saveTimes(times); 
 

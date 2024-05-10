@@ -10,6 +10,12 @@
     "estado": "SP",
     "sigla": "SAO",
     "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png/120px-S%C3%A3o_Paulo_Futebol_Clube.png"
+  },
+  
+  {
+    "nome": "Flamengo",
+    "estado": "RJ",
+    "sigla": "FLA",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png/120px-S%C3%A3o_Paulo_Futebol_Clube.png"
   }
-
 ]
