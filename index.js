@@ -48,6 +48,13 @@ class Time {
         }  
         
         
+        async filterTimesByName(nome) {
+            let times = await this.loadTimes();
+            let filteredTimesName = times.filter(t => t.nome.toLowerCase() === nome.toLowerCase())
+
+            return filteredTimesName
+        }
+
 
         async filterTimesByState(estado){
             let times = await this.loadTimes();
@@ -110,8 +117,8 @@ app.delete('/times/:nome', async (req, res) => {
 
 
 
-app.get('/times/:todos', async (req, res) => {
-    const { todos } = req.params
+app.get('/times/todos', async (req, res) => {
+
 
     try {
         let times = await time.loadTimes();
@@ -124,10 +131,26 @@ app.get('/times/:todos', async (req, res) => {
 
 
 
+app.get('/times/:nome', async (req, res, next) => {
+    const { nome } = req.params;
+
+    try {
+        let times = await time.filterTimesByName(nome);
+
+        if (times.length === 0) {
+            throw new Error(`Time ${nome} não cadastrado na nossa base de dados!`);
+        }
+
+        res.status(200).send(times);
+    } catch (error) {
+        next(error); 
+    }
+
+})
+
+
 app.get('/times/:estado', async (req, res, next) => {
     const { estado } = req.params;
-
-    let times = await time.filterTimesByState(estado);
 
 
     try {
