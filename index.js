@@ -4,7 +4,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
-const port = 3333;
+const port = 3000;
 
 'app.use(bodyParser.json());'
 
@@ -106,6 +106,20 @@ app.delete('/times/:nome', async (req, res) => {
     await time.saveTimes(times);
 
     res.status(200).send("Time deletado com sucesso")
+})
+
+
+
+app.get('/times/:todos', async (req, res) => {
+    const { todos } = req.params
+
+    try {
+        let times = await time.loadTimes();
+        res.status(200).send(times);
+    } catch (error) {
+        res.status(500).send("Erro ao carregar os times.");
+    }
+
 })
 
 
