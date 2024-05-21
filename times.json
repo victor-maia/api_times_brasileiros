@@ -3,19 +3,117 @@
     "nome": "Corinthians",
     "estado": "SP",
     "sigla": "COR",
-    "escudo": "https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png"
+    "escudo": "https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png",
+    "descricao": "O Sport Club Corinthians Paulista, comumente referido como Corinthians, ou ainda pelo seu acrônimo SCCP, é um clube poliesportivo brasileiro da cidade de São Paulo, capital do estado de São Paulo. Foi fundado como uma equipe de futebol no dia 1 de setembro de 1910 por um grupo de operários do bairro Bom Retiro. Seu nome foi inspirado no Corinthian Football Club de Londres, que excursionava pelo Brasil.",
+    "xBrasileiro": "7",
+    "divisao": "A"
   },
   {
     "nome": "São Paulo",
     "estado": "SP",
     "sigla": "SAO",
-    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png/120px-S%C3%A3o_Paulo_Futebol_Clube.png"
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png/120px-S%C3%A3o_Paulo_Futebol_Clube.png",
+    "descricao": "O São Paulo Futebol Clube, mais conhecido como São Paulo FC ou simplesmente São Paulo, é um clube poliesportivo brasileiro da cidade de São Paulo, capital do estado homônimo. Foi fundado em 25 de janeiro de 1930, tendo interrompido suas atividades em maio de 1935, e as retomado em dezembro do mesmo ano.",
+    "xBrasileiro": "6",
+    "divisao": "A"
   },
-  
   {
     "nome": "Flamengo",
     "estado": "RJ",
     "sigla": "FLA",
-    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png/120px-S%C3%A3o_Paulo_Futebol_Clube.png"
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flamengo_braz_logo.svg",
+    "descricao": "O Clube de Regatas do Flamengo (mais conhecido simplesmente como Flamengo, popularmente pelos apelidos de Fla, Mengo e Mengão, e cujo acrônimo é CRF) é uma agremiação poliesportiva brasileira com sede na cidade do Rio de Janeiro, capital do estado homônimo. Fundado no bairro do Flamengo para disputas do esporte remo em 17 de novembro de 1895.",
+    "xBrasileiro": "8",
+    "divisao": "A"
+  },
+  {
+    "nome": "Vasco da Gama",
+    "estado": "RJ",
+    "sigla": "VAS",
+    "escudo": "https://upload.wikimedia.org/wikipedia/pt/a/ac/CRVascodaGama.png",
+    "descricao": "O Club de Regatas Vasco da Gama, mais conhecido como Vasco da Gama ou simplesmente Vasco, cujo acrônimo é CRVG, é uma entidade sócio-poliesportiva brasileira com sede na cidade do Rio de Janeiro, fundada em 21 de agosto de 1898 por um grupo de remadores. Inspirados nas celebrações do quarto centenário da descoberta do caminho marítimo para as Índias, ocorrida em 1498, batizaram a nova agremiação com o nome do navegador português que alcançou tal feito, Vasco da Gama.",
+    "xBrasileiro": "4",
+    "divisao": "A"
+  },
+  {
+    "nome": "Fluminense",
+    "estado": "RJ",
+    "sigla": "FLU",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/FFC_crest.svg/130px-FFC_crest.svg.png",
+    "descricao": "O Fluminense Football Club, comumente referido como Fluminense, é um clube multidesportivo brasileiro sediado no bairro de Laranjeiras, localizado na Zona Sul da cidade do Rio de Janeiro, capital do estado homônimo.",
+    "xBrasileiro": "4",
+    "divisao": "A"
+  },
+  {
+    "nome": "Santos",
+    "estado": "SP",
+    "sigla": "SAN",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png",
+    "descricao": "O Santos, é um clube brasileiro fundado em 14 de abril de 1912, com sede na cidade homônima. Inicialmente suas cores seriam o branco, azul e dourado, mas um ano após a sua fundação, ficou decidido que as cores do clube passariam a ser branco e preto.",
+    "xBrasileiro": "8",
+    "divisao": "B"
+  },
+  {
+    "nome": "Palmeiras",
+    "estado": "SP",
+    "sigla": "PAL",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1024px-Palmeiras_logo.svg.png",
+    "descricao": "A Sociedade Esportiva Palmeiras, fundada como Palestra Italia, é um clube poliesportivo brasileiro com sede em São Paulo que tem como modalidade esportiva principal o futebol, com um dos times mais vitoriosos e que mais vezes conquistou o Campeonato Paulista de Futebol.",
+    "xBrasileiro": "11",
+    "divisao": "A"
+  },
+  {
+    "nome": "Internacional",
+    "estado": "RS",
+    "sigla": "INT",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/1024px-Escudo_do_Sport_Club_Internacional.svg.png",
+    "descricao": "O Sport Club Internacional (mais conhecido como Internacional ou Inter de Porto Alegre e popularmente pelo apelido de Colorado) é um clube de futebol brasileiro da cidade de Porto Alegre, no Rio Grande do Sul, fundado em 4 de abril de 1909.",
+    "xBrasileiro": "3",
+    "divisao": "A"
+  },
+  {
+    "nome": "Grêmio",
+    "estado": "RS",
+    "sigla": "GRE",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Gremio_logo.svg/800px-Gremio_logo.svg.png",
+    "descricao": "O Grêmio Foot-Ball Porto Alegrense, mais conhecido como Grêmio, é um clube de futebol brasileiro da cidade de Porto Alegre, no Rio Grande do Sul, fundado em 15 de setembro de 1903.",
+    "xBrasileiro": "2",
+    "divisao": "A"
+  },
+  {
+    "nome": "Atlético Mineiro",
+    "estado": "MG",
+    "sigla": "CAM",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Atletico_mineiro_galo.png/800px-Atletico_mineiro_galo.png",
+    "descricao": "O Clube Atlético Mineiro é um clube de futebol brasileiro da cidade de Belo Horizonte, Minas Gerais. Foi fundado em 25 de março de 1908 por um grupo de estudantes, desportistas e membros da elite da cidade.",
+    "xBrasileiro": "3",
+    "divisao": "A"
+  },
+  {
+    "nome": "Cruzeiro",
+    "estado": "MG",
+    "sigla": "CRU",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cruzeiro_Esporte_Clube_%28logo%29.svg/120px-Cruzeiro_Esporte_Clube_%28logo%29.svg.png",
+    "descricao": "O Cruzeiro Esporte Clube é um clube multiesportivo brasileiro de Belo Horizonte, Minas Gerais. Fundado em 2 de janeiro de 1921, o clube celeste tem como suas cores oficiais o azul e branco.",
+    "xBrasileiro": "4",
+    "divisao": "A"
+  },
+  {
+    "nome": "Botafogo",
+    "estado": "RJ",
+    "sigla": "BOT",
+    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/800px-Botafogo_de_Futebol_e_Regatas_logo.svg.png",
+    "descricao": "Botafogo de Futebol e Regatas é um clube multiesportivo brasileiro, com sede no bairro homônimo ao clube, no Rio de Janeiro. Um dos clubes mais tradicionais do Brasil, o Botafogo tem como suas cores oficiais o preto e o branco.",
+    "xBrasileiro": "2",
+    "divisao": "A"
+  },
+  {
+    "nome": "Bahia",
+    "estado": "BA",
+    "sigla": "BAH",
+    "escudo": "https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png",
+    "descricao": "O Esporte Clube Bahia é um clube desportivo brasileiro de futebol da cidade de Salvador, na Bahia. Conhecido simplesmente como Bahia, foi fundado em 1º de janeiro de 1931 por ex-jogadores do Clube Bahiano de Tênis e a Associação Atlética da Bahia, agremiações que tinham encerrado suas atividades futebolísticas no final da década de 1920.",
+    "xBrasileiro": "2",
+    "divisao": "A"
   }
 ]

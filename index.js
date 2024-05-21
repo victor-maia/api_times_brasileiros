@@ -2,12 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs').promises; 
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
-'app.use(bodyParser.json());'
-
+app.use(bodyParser.json());
+app.use(cors({
+    origin: '*'
+  }));
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
@@ -21,12 +24,15 @@ class Time {
         this.filePath = filePath;
     }
 
-        createTime(nome, estado, sigla, escudo){
+        createTime(nome, estado, sigla, escudo, descricao, xBrasileiro, divisao){
             return {
                 nome,
                 estado,
                 sigla,
-                escudo
+                escudo,
+                descricao,
+                xBrasileiro,
+                divisao
             }
         }
 
@@ -71,9 +77,9 @@ const time = new Time(filePath);
 // Adicionar time
 
 app.post('/times', async (req, res) => {
-    const { nome, estado, sigla, escudo } = req.body;
+    const { nome, estado, sigla, escudo, descricao, xBrasileiro, divisao} = req.body;
 
-    if (!nome || !estado || !sigla || !escudo ) {
+    if (!nome || !estado || !sigla || !escudo || !descricao || !xBrasileiro ) {
         return res.status(400).send("Por favor, forneça o nome e o estado do time.");
     }
 
@@ -84,7 +90,7 @@ app.post('/times', async (req, res) => {
     }
 
 
-    const novoTime = time.createTime(nome, estado, sigla, escudo)
+    const novoTime = time.createTime(nome, estado, sigla, escudo, descricao, xBrasileiro, divisao)
 
     
     times.push(novoTime); 
