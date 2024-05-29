@@ -99,6 +99,34 @@ app.post('/times', async (req, res) => {
     res.status(201).send(novoTime);
 });
 
+// Rota para atualizar um time
+app.put('/times/:nome', async (req, res) => {
+    const { nome } = req.params;
+    const { novoNome, estado, sigla, escudo } = req.body;
+
+    let times = await time.loadTimes();
+
+    const index = times.findIndex(t => t.nome.toLowerCase() === nome.toLowerCase());
+
+    if (index === -1) {
+        return res.status(404).send("Time não encontrado.");
+    }
+
+    // Atualiza os dados do time, incluindo o nome
+    times[index] = {
+        ...times[index],
+        nome: novoNome || times[index].nome,
+        estado: estado || times[index].estado,
+        sigla: sigla || times[index].sigla,
+        escudo: escudo || times[index].escudo
+    };
+
+    // Salva a lista atualizada de times
+    await time.saveTimes(times);
+
+    res.status(200).send(times[index]);
+});
+
 // Remover time
 
 app.delete('/times/:nome', async (req, res) => {
