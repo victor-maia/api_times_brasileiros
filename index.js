@@ -102,7 +102,7 @@ app.post('/times', async (req, res) => {
 // Remover time
 
 app.delete('/times/:nome', async (req, res) => {
-    const { nome } = req.params
+    const { nome} = req.params
 
     let times = await time.loadTimes()
 

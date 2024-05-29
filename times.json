@@ -27,7 +27,7 @@
     "divisao": "A"
   },
   {
-    "nome": "Vasco da Gama",
+    "nome": "Vasco",
     "estado": "RJ",
     "sigla": "VAS",
     "escudo": "https://upload.wikimedia.org/wikipedia/pt/a/ac/CRVascodaGama.png",
@@ -104,15 +104,6 @@
     "sigla": "BOT",
     "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/800px-Botafogo_de_Futebol_e_Regatas_logo.svg.png",
     "descricao": "Botafogo de Futebol e Regatas é um clube multiesportivo brasileiro, com sede no bairro homônimo ao clube, no Rio de Janeiro. Um dos clubes mais tradicionais do Brasil, o Botafogo tem como suas cores oficiais o preto e o branco.",
-    "xBrasileiro": "2",
-    "divisao": "A"
-  },
-  {
-    "nome": "Bahia",
-    "estado": "BA",
-    "sigla": "BAH",
-    "escudo": "https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png",
-    "descricao": "O Esporte Clube Bahia é um clube desportivo brasileiro de futebol da cidade de Salvador, na Bahia. Conhecido simplesmente como Bahia, foi fundado em 1º de janeiro de 1931 por ex-jogadores do Clube Bahiano de Tênis e a Associação Atlética da Bahia, agremiações que tinham encerrado suas atividades futebolísticas no final da década de 1920.",
     "xBrasileiro": "2",
     "divisao": "A"
   }
