@@ -97,6 +97,23 @@ class UserController {
     }
 
 
+    async seeTeamsByState(req, res, next){
+        const { estado } = req.params;
+
+        try {
+            const time = new Time();
+            let times = await time.filterTimesByState(estado);
+    
+            if (times.length === 0) {
+                throw new Error('Estado não possui times cadastrados');
+            }
+    
+            res.status(200).send(times);
+        } catch (error) {
+            next(error);
+        }
+    }
+
 }
 
 module.exports = UserController;
