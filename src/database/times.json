@@ -9,15 +9,6 @@
     "divisao": "B"
   },
   {
-    "nome": "São Paulo",
-    "estado": "SP",
-    "sigla": "SAO",
-    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png/120px-S%C3%A3o_Paulo_Futebol_Clube.png",
-    "descricao": "O São Paulo Futebol Clube, mais conhecido como São Paulo FC ou simplesmente São Paulo, é um clube poliesportivo brasileiro da cidade de São Paulo, capital do estado homônimo. Foi fundado em 25 de janeiro de 1930, tendo interrompido suas atividades em maio de 1935, e as retomado em dezembro do mesmo ano.",
-    "xBrasileiro": "6",
-    "divisao": "A"
-  },
-  {
     "nome": "Flamengo",
     "estado": "RJ",
     "sigla": "FLA",
