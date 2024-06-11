@@ -41,33 +41,6 @@ class UserController {
     }
 
 
-    async updateTeam(req, res){
-        const { nome } = req.params;
-        const { novoNome, estado, sigla, escudo } = req.body;
-
-        let times = await time.loadTimes();
-
-        const index = times.findIndex(t => t.nome.toLowerCase() === nome.toLowerCase());
-
-        if (index === -1) {
-            return res.status(404).send("Time não encontrado.");
-        }
-
-        times[index] = {
-            ...times[index],
-            nome: novoNome || times[index].nome,
-            estado: estado || times[index].estado,
-            sigla: sigla || times[index].sigla,
-            escudo: escudo || times[index].escudo
-        };
-
-
-        await time.saveTimes(times);
-
-        res.status(200).send(times[index]);
-    }
-
-    
 
     async allTeams(req, res){
         try {
@@ -112,6 +85,34 @@ class UserController {
         } catch (error) {
             next(error);
         }
+    }
+
+    async updateTeam(req, res) {
+        const { nome } = req.params;
+        const { novoNome, estado, sigla, escudo, descricao, xBrasileiro, divisao } = req.body;
+
+        let times = await time.loadTimes();
+
+        const index = times.findIndex(t => t.nome.toLowerCase() === nome.toLowerCase());
+
+        if (index === -1) {
+            return res.status(404).send("Time não encontrado.");
+        }
+
+        times[index] = {
+            ...times[index],
+            nome: novoNome || times[index].nome,
+            estado: estado || times[index].estado,
+            sigla: sigla || times[index].sigla,
+            escudo: escudo || times[index].escudo,
+            descricao: descricao || times[index].descricao,
+            xBrasileiro: xBrasileiro || times[index].xBrasileiro,
+            divisao: divisao || times[index].divisao
+        };
+
+        await time.saveTimes(times);
+
+        res.status(200).send(times[index]);
     }
 
 }
