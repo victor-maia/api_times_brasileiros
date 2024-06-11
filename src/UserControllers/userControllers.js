@@ -1,7 +1,39 @@
 const Time = require('../Times/times.js');
 const time = new Time();
+const path = require('path');
+const fs = require('fs').promises;
+const jwt = require('jsonwebtoken');
+const secretKey = 'your_secret_key_here';
+
+const databasePath = path.join(__dirname, '..', 'database', 'users.json');
 
 class UserController {
+
+    async login(req, res){
+
+        console.log('Caminho do arquivo:', databasePath);
+        
+        const { username, password } = req.body;
+
+        try {
+            // Carrega os usuários do arquivo JSON
+            const data = await fs.readFile(databasePath, 'utf8');
+            const users = JSON.parse(data);
+    
+ 
+            const user = users.find(u => u.username === username && u.password === password);
+            if (!user) {
+                return res.status(401).json({ message: 'Credenciais inválidas' });
+            }
+    
+            const token = jwt.sign({ username }, secretKey, { expiresIn: '1h' });
+            res.json({ token });
+        } catch (error) {
+            console.error('Erro ao fazer login:', error);
+            res.status(500).json({ message: 'Erro ao fazer login' });
+        }
+    }
+
     async createTeam(req, res) {
         const { nome, estado, sigla, escudo, descricao, xBrasileiro, divisao } = req.body;
 

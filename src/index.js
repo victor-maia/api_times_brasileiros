@@ -11,7 +11,8 @@ app.use(cors({ origin: '*' }));
 
 const controllers = new UserController();
 
-app.post('/times', (req, res) => controllers.createTeam(req, res));
+app.post('/login', (req, res) => controllers.login(req, res));
+app.post('/times', (req, res)  => controllers.createTeam(req, res));
 app.put('/times/:nome', (req, res) => controllers.updateTeam(req, res));
 app.delete('/times/:nome', (req, res) => controllers.deleteTeam(req, res));
 app.get('/times/todos', (req, res) => controllers.allTeams(req, res));
