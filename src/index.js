@@ -5,14 +5,15 @@ const UserController = require('./UserControllers/userControllers.js');
 const swaggerSetup = require('./swagger'); // Importe o Swagger
 
 const app = express();
+const port = process.env.PORT || 3000;
 
-
+app.listen(port);
 app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
 
 app.get('/', function (req, res) {
-    res.send('Hello World')
-  })
+  res.send('Hello World')
+})
 
 
 swaggerSetup(app); // Configure o Swagger
@@ -27,5 +28,5 @@ app.get('/times/todos', (req, res) => controllers.allTeams(req, res));
 app.get('/times/:nome', (req, res, next) => controllers.seeTeamsByName(req, res, next));
 app.get('/times/estado/:estado', (req, res, next) => controllers.seeTeamsByState(req, res, next));
 
-app.listen(process.env.port || 3000)
+
 
