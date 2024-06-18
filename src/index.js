@@ -10,6 +10,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
 
+app.get('/', function (req, res) {
+    res.send('Hello World')
+  })
+
+
 swaggerSetup(app); // Configure o Swagger
 
 const controllers = new UserController();
