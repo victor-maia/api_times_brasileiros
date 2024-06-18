@@ -5,7 +5,7 @@ const UserController = require('./UserControllers/userControllers.js');
 const swaggerSetup = require('./swagger'); // Importe o Swagger
 
 const app = express();
-const port = 3000;
+
 
 app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
@@ -22,6 +22,5 @@ app.get('/times/todos', (req, res) => controllers.allTeams(req, res));
 app.get('/times/:nome', (req, res, next) => controllers.seeTeamsByName(req, res, next));
 app.get('/times/estado/:estado', (req, res, next) => controllers.seeTeamsByState(req, res, next));
 
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
-});
+app.listen(process.env.port || 3000)
+
